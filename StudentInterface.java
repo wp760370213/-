@@ -1,10 +1,10 @@
-package fourth;
+
 
 public interface StudentInterface {
-	// ÉèÖÃÑ§ÉúµÄÑ§·Ñ
+	// è®¾ç½®å­¦ç”Ÿçš„å­¦è´¹
 		public abstract void setFee(double fee);
 		
-		// »ñÈ¡Ñ§ÉúµÄÑ§·Ñ
+		// è·å–å­¦ç”Ÿçš„å­¦è´¹
 		public abstract void getFee(double fee);
 
 }
