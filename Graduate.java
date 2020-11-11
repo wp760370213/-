@@ -1,7 +1,5 @@
 
-package fourth;
 
-import java.util.Scanner;
 
 public class Graduate implements StudentInterface,TeacherInterface{
 	// 成员变量
