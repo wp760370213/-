@@ -1,86 +1,83 @@
-/*
- * author shenlu
- * 
- */
+
 package fourth;
 
 import java.util.Scanner;
 
 public class Graduate implements StudentInterface,TeacherInterface{
-	// ³ÉÔ±±äÁ¿
+	// æˆå‘˜å˜é‡
 		String name;
 		String sex;
 		int age;
 		double fee;
 		double pay;
 		
-		// ÊµÏÖ½Ó¿ÚÖĞµÄ³éÏó·½·¨
+		// å®ç°æ¥å£ä¸­çš„æŠ½è±¡æ–¹æ³•
 		@Override
 		public void setPay(double pay) {
 			this.pay = pay * 12;
-			System.out.println("ÄãµÄÄêÊÕÈëÎª£º" + this.pay);
+			System.out.println("ä½ çš„å¹´æ”¶å…¥ä¸ºï¼š" + this.pay);
 		}
 		
-		// ÊµÏÖ½Ó¿ÚÖĞµÄ³éÏó·½·¨
+		// å®ç°æ¥å£ä¸­çš„æŠ½è±¡æ–¹æ³•
 		@Override
 		public void getPay(double pay) {
 			this.pay = pay * 12;
-			System.out.println("ÄãµÄÄêÊÕÈëÎª£º" + this.pay);
+			System.out.println("ä½ çš„å¹´æ”¶å…¥ä¸ºï¼š" + this.pay);
 		}
 		
-		// ÊµÏÖ½Ó¿ÚÖĞµÄ³éÏó·½·¨
+		// å®ç°æ¥å£ä¸­çš„æŠ½è±¡æ–¹æ³•
 		@Override
 		public void setFee(double fee) {
 			this.fee = fee;
-			System.out.println("ÄãÒ»ÄêµÄÑ§·ÑÎª£º" + this.fee);
+			System.out.println("ä½ ä¸€å¹´çš„å­¦è´¹ä¸ºï¼š" + this.fee);
 		}
 		
-		// ÊµÏÖ½Ó¿ÚÖĞµÄ³éÏó·½·¨
+		// å®ç°æ¥å£ä¸­çš„æŠ½è±¡æ–¹æ³•
 		@Override
 		public void getFee(double fee) {
 			this.fee = fee;
-			System.out.println("ÄãÒ»ÄêµÄÑ§·ÑÎª£º" + this.fee);
+			System.out.println("ä½ ä¸€å¹´çš„å­¦è´¹ä¸ºï¼š" + this.fee);
 		}
 		
 
 		public boolean Loan(){
 			if ((this.pay - this.fee) < 3000) {
-				System.out.println("ÄãµÄÄêÊÕÈë" + this.pay + "  ¼õÈ¥Ñ§·Ñ" + this.fee + " µÈÓÚ" + (this.pay - this.fee));
+				System.out.println("ä½ çš„å¹´æ”¶å…¥" + this.pay + "  å‡å»å­¦è´¹" + this.fee + " ç­‰äº" + (this.pay - this.fee));
 				return true;
 			}
-			System.out.println("ÄãµÄÄêÊÕÈë" + this.pay + "   ³ıÈ¥ÄÉË°"+this.pay*0.03+"  ¼õÈ¥Ñ§·Ñ" + this.fee + " µÈÓÚ" + (this.pay - this.fee));
+			System.out.println("ä½ çš„å¹´æ”¶å…¥" + this.pay + "   é™¤å»çº³ç¨"+this.pay*0.03+"  å‡å»å­¦è´¹" + this.fee + " ç­‰äº" + (this.pay - this.fee));
 			return false;
 		}
 		
 		public static void main(String[] args) {
-			// ´´½¨Ò»¸öÑĞ¾¿Éú¶ÔÏó
+			// åˆ›å»ºä¸€ä¸ªç ”ç©¶ç”Ÿå¯¹è±¡
 			Graduate graduate1 = new Graduate();
 			Graduate graduate2 = new Graduate();
-			// ÑĞ¾¿Éú¶ÔÏóµÄ³õÊ¼»¯
-			graduate1.name = "Ğ¡Ã÷Í¬Ñ§";
-			graduate1.age = 27;
-			graduate1.sex = "ÄĞ";
+			// ç ”ç©¶ç”Ÿå¯¹è±¡çš„åˆå§‹åŒ–
+			graduate1.name = "å¼ ä¸‰";
+			graduate1.age = 18;
+			graduate1.sex = "ç”·";
 			
-			graduate2.name = "Ğ¡ºìÍ¬Ñ§";
-			graduate2.age = 26;
-			graduate2.sex = "Å®";
+			graduate2.name = "æå››";
+			graduate2.age = 19;
+			graduate2.sex = "å¥³";
 			
-			System.out.println("ÄãºÃ:" + graduate1.name+"   ÄêÁä£º"+graduate1.age+"Ëê"+"    ĞÔ±ğ£º"+graduate1.sex);
+			System.out.println("ä½ å¥½:" + graduate1.name+"   å¹´é¾„ï¼š"+graduate1.age+"å²"+"    æ€§åˆ«ï¼š"+graduate1.sex);
 			
-			// ÉèÖÃÔÂ¹¤×Ê
+			// è®¾ç½®æœˆå·¥èµ„
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("ÇëÊäÈëÄãµÄÔÂ¹¤×Ê£º");
+			System.out.println("è¯·è¾“å…¥ä½ çš„æœˆå·¥èµ„ï¼š");
 			
 			double pay = scanner.nextDouble();
 			graduate1.setPay(pay);
 			
-			// ÉèÖÃÑ§·Ñ
+			// è®¾ç½®å­¦è´¹
 			try {
-				System.out.println("ÇëÊäÈëÄãÒ»ÄêµÄÑ§·Ñ£º");
+				System.out.println("è¯·è¾“å…¥ä½ çš„å­¦è´¹ï¼š");
 				double fee = scanner.nextDouble();
 				graduate1.setFee(fee);
 				if(fee==0) {
-					System.out.println("Ñ§·Ñ²»ÄÜÎª0Å¶");
+					System.out.println("å­¦è´¹ä¸èƒ½ä¸º0");
 				}
 			}catch(Exception e) {
 				
@@ -90,22 +87,22 @@ public class Graduate implements StudentInterface,TeacherInterface{
 			
 			
 			System.out.println();
-			//µÚ¶ş¸ö²©Ê¿Éú
-			System.out.println("ÄãºÃ:" + graduate2.name+"   ÄêÁä£º"+graduate2.age+"Ëê"+"    ĞÔ±ğ£º"+graduate2.sex);
+			//ç¬¬äºŒä¸ªåšå£«ç”Ÿ
+			System.out.println("ä½ å¥½:" + graduate2.name+"   å¹´é¾„ï¼š"+graduate2.age+"å²"+"    æ€§åˆ«ï¼š"+graduate2.sex);
 			
 			Scanner scanner1 = new Scanner(System.in);
-			System.out.println("ÇëÊäÈëÄãµÄÔÂ¹¤×Ê£º");
+			System.out.println("è¯·è¾“å…¥ä½ çš„æœˆå·¥èµ„ï¼š");
 			
 			double pay1 = scanner1.nextDouble();
 			graduate1.setPay(pay1);
 			
-			// ÉèÖÃÑ§·Ñ
+			// è®¾ç½®å­¦è´¹
 			try {
-				System.out.println("ÇëÊäÈëÄãµÄÑ§·Ñ£º");
+				System.out.println("è¯·è¾“å…¥ä½ çš„å­¦è´¹ï¼š");
 				double fee = scanner.nextDouble();
 				graduate1.setFee(fee);
 				if(fee==0) {
-					System.out.println("´íÎó");
+					System.out.println("é”™è¯¯");
 				}
 			}catch(Exception e) {
 				
