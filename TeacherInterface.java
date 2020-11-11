@@ -1,10 +1,10 @@
-package fourth;
+
 
 public interface TeacherInterface {
-	// ÉèÖÃ½ÌÊ¦µÄ¹¤×Ê
+	// è®¾ç½®æ•™å¸ˆçš„å·¥èµ„
 		public abstract void setPay(double pay);
 		
-		// »ñÈ¡½ÌÊ¦µÄ¹¤×Ê
+		// è·å–æ•™å¸ˆçš„å·¥èµ„
 		public abstract void getPay(double pay);
 
 
