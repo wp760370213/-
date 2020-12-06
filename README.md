@@ -32,16 +32,16 @@
 			this.sex=sex;
 			this.age=age;
 			}
-   Graduate() {                                            //无参构造方法
+    Graduate() {                                            //无参构造方法
 		}
-//实现属性的封装  (例如)
+    //实现属性的封装  (例如)
 	public String getName() {
 			return name;
 		}
 		public void setName(String name) {
 			this.name = name;
 		}
-// 实现接口中的抽象方法
+    // 实现接口中的抽象方法
 		public void setPay(float pay) {
 			this.pay = pay * 12;       //月收入*12=年收入
 			System.out.println("年收入为：" + this.pay);
@@ -51,7 +51,7 @@
 			this.pay = pay * 12;
 			System.out.println("年收入为：" + this.pay);
 		}
-//boolean是java中的布尔型（逻辑型）数据类型
+    //boolean是java中的布尔型（逻辑型）数据类型
 	public boolean paytaxes(){    
 			if ((this.pay - this.fee) < 5000) {
 				System.out.println("纳税金额为:"+(this.pay -this.fee)*0.03f+"\n");
